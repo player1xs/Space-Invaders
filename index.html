@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script defer src="/js/main.js" charset="UTF-8"></script>
+  <title>Space Invaders</title>
+</head>
+<body>
+  <h1>SPACE INVADERS</h1>
+  <section class="top-wrapper">
+    <div class="score">SCORE - <span id="score"></span></div>
+    <div class="hi-score">HI-SCORE - 187 <span id="hi-score"></span></div>
+  </section>
+  <main class="grid-wrapper">
+    <section class="the-grid" style="display: none">
+    </section>
+  </main>
+  <div id="start" style="display: block">
+    <a href="#" onclick="startGame()">START GAME <br></br> Arrow Left </br> Arrow Right </br> X - Pew Pew </a>
+  </div>
+  <div id="game-over" style="display: none">
+    <h2>GAME OVER</h2>
+    <div class="score"><span id="score"></span></div>
+    <button id="reset">START AGAIN ?</button>
+  </div>
+  <section class="bottom-wrapper">
+    <div class="lives">LIVES  <span id="life"></span></div>
+    <div class="credit">CREDITS 01</div>
+  </section>
+</body>
+</html>
