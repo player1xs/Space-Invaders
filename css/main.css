@@ -10,7 +10,7 @@ html {
 body {
   margin: 0;
   /* background-color: black; */
-  background-image: url(/assets/deathstar.gif);
+  background-image: url(../assets/deathstar.gif);
   background-repeat: no-repeat;
   background-size: cover;
   background-size: cover;
@@ -35,7 +35,7 @@ h1 {
 }
 
 .grid-wrapper {
-  background-image: url(/assets/deathstar.gif);
+  background-image: url(../assets/deathstar.gif);
   background-repeat: no-repeat;
   background-size: cover;
   background-size: cover;
@@ -131,28 +131,28 @@ h2 {
 }
 
 .the-grid div.player {
-  background-image: url(/assets/xwing.png);
+  background-image: url(../assets/xwing.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-size: cover;
 }
 
 .invader1 {
-  background-image: url(/assets/tie-advanced\ \(1\).png);
+  background-image: url(../assets/tie-advanced\ \(1\).png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .invader2 {
-  background-image: url(/assets/vulture-droidship.png);
+  background-image: url(../assets/vulture-droidship.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .pew {
-  background-image: url(/assets/pew.png);
+  background-image: url(../assets/pew.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -167,7 +167,7 @@ h2 {
 }
 
 .boom {
-  background-image: url(/assets/boom.webp);
+  background-image: url(../assets/boom.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

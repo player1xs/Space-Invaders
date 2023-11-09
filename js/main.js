@@ -32,7 +32,7 @@ function resetGame() {
   livesDisplay.innerText = 'XXX' // change to my avatar
 }
 
-const battlemusic = new Audio('sounds/HAPPY STAR WARS DAY Imperial March (Williams) - Mega Man Style 8-Bit Remix (128kbps).mp3')
+const battlemusic = new Audio('../sounds/HAPPY STAR WARS DAY Imperial March (Williams) - Mega Man Style 8-Bit Remix (128kbps).mp3')
 battlemusic.volume = 0.1
 
 function startGame(evt) {
@@ -51,7 +51,7 @@ function startGame(evt) {
 }
 
 function gameOver(evt) {
-  const awardMusic = new Audio('sounds/Star Wars Throne Room Theme (2022) [8 Bit Tribute to John Williams] - 8 Bit Universe (128kbps).mp3')
+  const awardMusic = new Audio('../sounds/Star Wars Throne Room Theme (2022) [8 Bit Tribute to John Williams] - 8 Bit Universe (128kbps).mp3')
   awardMusic.volume = 0.1
   startDiv.style.display = 'none'
   grid.style.display = 'none'
@@ -182,9 +182,9 @@ function moveInvaders1(){
 function pewPewPew(evt) {
   let laserId
   let currentIndexLaser = currentIndexPlayer
-  const pewSound = new Audio('sounds/shoot.wav')
+  const pewSound = new Audio('../sounds/shoot.wav')
   pewSound.volume = 0.2
-  const boomSound = new Audio('sounds/invaderkilled.wav')
+  const boomSound = new Audio('../sounds/invaderkilled.wav')
   boomSound.volume = 0.2
 
   function movePewPew() {
