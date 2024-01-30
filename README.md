@@ -43,7 +43,7 @@ Planning
 
 First I laid down a rough sketch on Excalidraw, a browser-based wireframe sketching tool. This would let me visualise my creation. I usually tend to colour code my wireframes per language and add notes on what would need doing. Here I mostly used yellow for JavaScript, black for HTML. (red was for bonus ideas)
 
-
+![wireframe](https://github.com/player1xs/Space-Invaders/assets/148089820/754b39ef-8cdd-41d6-9a87-0021bbba573b)
 
 
 The next thing I did was to write a pseudocode to see what I will need to tackle. Here, I wrote in detail how the game would work. All the to-do lines were roughly organised into groups of how I want to structure/layout my code. At the top foundational items, such as querySelectors and DOM eventListener. Then moving into everything that would pertain to the enemy, after the player. In my code I also gave myself notes as to what function/key-words I would need for which stage. To tidy up my VScode, I pulled my pseudocode onto a notepad and had that visible on a second monitor, so I could tick things off as I went along.
