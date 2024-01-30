@@ -48,6 +48,7 @@ First I laid down a rough sketch on Excalidraw, a browser-based wireframe sketch
 
 The next thing I did was to write a pseudocode to see what I will need to tackle. Here, I wrote in detail how the game would work. All the to-do lines were roughly organised into groups of how I want to structure/layout my code. At the top foundational items, such as querySelectors and DOM eventListener. Then moving into everything that would pertain to the enemy, after the player. In my code I also gave myself notes as to what function/key-words I would need for which stage. To tidy up my VScode, I pulled my pseudocode onto a notepad and had that visible on a second monitor, so I could tick things off as I went along.
 
+![pseudo](https://github.com/player1xs/Space-Invaders/assets/148089820/326114af-d310-4d0a-bffa-013079391c3c)
 
 
 Additionally, I created a day by day list. So I can keep a plan and set aside big problems per certain day. I must admit I was a little harsh on myself setting this up; on the second day I tackled all big problems for day three and four in one swoop, and then worked on smaller problems and refining. 
@@ -60,21 +61,20 @@ Step 1 - grid
 The first item I decided to tackle was to set up my grid. First I added some basic html based on my wireframe with a container-wrapper and an empty <section class=”the-grid>.
 Swiftly moving into my JS file; I went to set up the grid itself:
 
+![grid1](https://github.com/player1xs/Space-Invaders/assets/148089820/6c7121bb-b70d-47ec-9f27-d3f4b95b99c8)
 
 Since we weren’t allowed to use <canvas> I set out to make the grid rather large for the game; with this in mind I could make the Invaders move faster and therefore have the game look a little smoother, rather than aggressive jagged movements from grid cell to cell.
 
 First I created an empty array of cells and defined how tall and wide I would like my board to be based on the number of cells and then multiplied them together. This was then pushed through a for loop and created a <div> for them and attached them with an ID; rather than me creating several hundred individual <div> in my html. (the number was changed throughout, until it looked perfect.
 
 
-
-
-
+![grid2](https://github.com/player1xs/Space-Invaders/assets/148089820/19b2cc5d-ecea-4b99-bf4d-4fc8b71ef639)
 
 Step 2 - Barebones
 
 Next up, I declared all my querySelectors based on my wireframe and HTML; and also my global variables.
 
-
+![global vars](https://github.com/player1xs/Space-Invaders/assets/148089820/bf44098d-cba4-4506-ad5a-ed80db6f56bf)
 
 Step 3 - I am creator of Player!
 
@@ -84,6 +84,7 @@ The player would move across the grid by using classList.add/remove when left or
 For the player to move, I decided to go with a switch function, as I haven’t had much opportunity by that time to implement one. The switch listened for keydown of left or right arrow (keyCode 37 and 39). 
 Using modulus and declaring the boundaries, I could define how far the Player character could go. Added an eventlistner for keydown and linked it with the movePlayer function - This idea worked immediately like a charm. 
 
+![move player](https://github.com/player1xs/Space-Invaders/assets/148089820/337471e0-5d06-4e8a-8f4a-71ec11693166)
 
 Step 4 - Invaders
 
@@ -92,12 +93,15 @@ First I declared an array for a group of Invaders and hard-coded their position 
 Additionally, I set up an empty array for when an Invader was killed, I could push to it; so, they wouldn’t respawn and to plan ahead for GAME OVER scenario # 1.
 Same as the Player, I created an add/remove function - which would let me easily move the characters around; just a smidge harder to move the entire array than just one sole one.
 
+![move inv](https://github.com/player1xs/Space-Invaders/assets/148089820/da33864c-6337-4309-a02d-ad4f03a4fe14)
+
+![inv display](https://github.com/player1xs/Space-Invaders/assets/148089820/ce1cf231-98fc-451e-81f2-de9577c1ce0f)
 
 Next up was what I later on referred to “as the hurt”. This section was all about trying to get the array moving across the board and moving down towards the player.
 First I declared the boundaries using modulus (instead of hardcoding). Then I had them moving left or right using the width with +/- 1 and once they detected a boundary, dropdown a row, and reverse direction.
 And then had the entire array move again, by removing them from the cells and adding a new one, the next cell over.
 
-
+![inv motion](https://github.com/player1xs/Space-Invaders/assets/148089820/9acabcee-0c6e-4cd4-aa5f-a3c35699ca25)
 
 
 I also included my first GAME OVER scenario here. This would pertain to the movement; once the enemy moves all the way down and an invader AND the player are in the same cell - GAME OVER. I added a small explosion for effect, and the game-over screen appears.
@@ -115,7 +119,7 @@ Under ‘const invaderKill’ is where the magic happened. Here I identify which
 Then the player gets an extra point.
 And we remove the interval of the laser if we missed and it hit the ceiling.
 
-
+![pew](https://github.com/player1xs/Space-Invaders/assets/148089820/f2570e12-cd48-465b-a495-8daeb58471b6)
 
 
 Next, I assigned the X key to the function; once again as a switch/case. And when pressed we get the classic pew sound.
@@ -123,6 +127,7 @@ Next, I assigned the X key to the function; once again as a switch/case. And whe
 After this, we compare the Invaders array to the killedInvaders array; and if they match, you do not win…you get a new wave of enemies that move 1.5x faster than the previous wave.
 Classic arcade games don’t let you win, you just go as far as you can.
 
+![kill array](https://github.com/player1xs/Space-Invaders/assets/148089820/66d6cb85-37d4-4b5a-af1f-010265f677ac)
 
 Step 6 - Start/End/Reset
 
@@ -135,15 +140,16 @@ The gameOver function kills the game music, and plays the StarWars throne room t
 Also will set the game back to false and display the score.
 On the gameOver screen is also a button to play again. Once clicked, we initiate resetPage, clear the interval and reset the score to zero.
 
+![game on](https://github.com/player1xs/Space-Invaders/assets/148089820/844be06d-d834-4d13-af4b-85fec31db5fb)
 
-
+![startscreen](https://github.com/player1xs/Space-Invaders/assets/148089820/c34d9269-e84d-4144-a1d2-7c3d156b61e9)
 
 Step 7 - time to look good
 
 Here I played around with the styling, removing the red border from every cell which helped me calculate/visualise the movements. The game has classic pixel font and pixel art throughout; with my favourite black/chartreuse theme that the original space invaders has.
 
 
-
+![game screen](https://github.com/player1xs/Space-Invaders/assets/148089820/d943b651-5bb0-4ca7-a54a-491104dd5ae8)
 
 Challenges
 
