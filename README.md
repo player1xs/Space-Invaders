@@ -1,31 +1,31 @@
-Project One - Space Invaders
+# Project One - Space Invaders
 
-Description
+## Description
 
 Project One was the creation of an in-browser game. This was week 4 of the course; after we covered the fundamentals of HTML, CSS, and JavaScript. The aim was to make a functioning game based on these languages with the main point that we were not allowed to use <canva>; but, instead focus on a grid format. There were several classic games to choose from (Tetris, Snake, MineSweeper, etc..), but playing Space Invaders in an actual arcade in my youth, I held an affinity to it.
 
 
-Deployment Link
+## Deployment Link
 
 https://player1xs.github.io/Space-Invaders/
 
 
-Instructions 
+## Instructions 
 
 Click and play, no packages need to be installed. Link above will take you straight there and just click START on the Menu. Have fun!
 
-Timeframe & Team
+## Timeframe & Team
 
 This was a solo project.
 The project was officially to be worked on from the 6th Nov(Mon) until 9th Nov(Thur) with presentations being held on the 10th. We did however have a planning day on the 3rd. (plus a little of my own time over the weekend).
 
-Technology
+## Technology
 
 Languages - HTML, CSS, JavaScript
 Wireframe - Excalidraw (browser app)
 Software - Visual Studio Code
 
-Brief
+## Brief
 
 As stated, this was a project to build an in-browser game using a grid format instead of <canvas>. Several games to choose from; but, I had to go with Space Invaders. Since I loved the original arcade version so much, I decided to make a pixel arcade version with StarWars theme.
 
@@ -39,7 +39,7 @@ Be able to shoot the enemy.
 Display the score on GAME OVER.
 DO NOT use canvas while creating your game!
 
-Planning
+## Planning
 
 First I laid down a rough sketch on Excalidraw, a browser-based wireframe sketching tool. This would let me visualise my creation. I usually tend to colour code my wireframes per language and add notes on what would need doing. Here I mostly used yellow for JavaScript, black for HTML. (red was for bonus ideas)
 
@@ -54,9 +54,9 @@ The next thing I did was to write a pseudocode to see what I will need to tackle
 Additionally, I created a day by day list. So I can keep a plan and set aside big problems per certain day. I must admit I was a little harsh on myself setting this up; on the second day I tackled all big problems for day three and four in one swoop, and then worked on smaller problems and refining. 
 
 
-Building my Project
+## Building my Project
 
-Step 1 - grid
+### Step 1 - grid
 
 The first item I decided to tackle was to set up my grid. First I added some basic html based on my wireframe with a container-wrapper and an empty <section class=”the-grid>.
 Swiftly moving into my JS file; I went to set up the grid itself:
@@ -70,13 +70,13 @@ First I created an empty array of cells and defined how tall and wide I would li
 
 ![grid2](https://github.com/player1xs/Space-Invaders/assets/148089820/19b2cc5d-ecea-4b99-bf4d-4fc8b71ef639)
 
-Step 2 - Barebones
+### Step 2 - Barebones
 
 Next up, I declared all my querySelectors based on my wireframe and HTML; and also my global variables.
 
 ![global vars](https://github.com/player1xs/Space-Invaders/assets/148089820/bf44098d-cba4-4506-ad5a-ed80db6f56bf)
 
-Step 3 - I am creator of Player!
+### Step 3 - I am creator of Player!
 
 For the player, I calculated which cell would be roughly the middle off the bottom row of cells and placed him in there.
 The player would move across the grid by using classList.add/remove when left or right were pressed. I found a wonderful mini pixel X-Wing fighter  and created a CSS class for it; which I could drop anywhere in my code, to keep things tidy.
@@ -86,7 +86,7 @@ Using modulus and declaring the boundaries, I could define how far the Player ch
 
 ![move player](https://github.com/player1xs/Space-Invaders/assets/148089820/337471e0-5d06-4e8a-8f4a-71ec11693166)
 
-Step 4 - Invaders
+### Step 4 - Invaders
 
 I thought to set out on a similar idea to the Player character for the Invaders.
 First I declared an array for a group of Invaders and hard-coded their position to the grid.
@@ -106,7 +106,7 @@ And then had the entire array move again, by removing them from the cells and ad
 
 I also included my first GAME OVER scenario here. This would pertain to the movement; once the enemy moves all the way down and an invader AND the player are in the same cell - GAME OVER. I added a small explosion for effect, and the game-over screen appears.
 
-Step 5 - Pew Pew laser
+### Step 5 - Pew Pew laser
 
 Time to get the player shooting!
 I created a style class, just like the Player and Invader called ‘pew’. A wonderful small red laser. This laser class would move exactly like the Player and Invader did; but move automatically and a single item.
@@ -129,7 +129,7 @@ Classic arcade games don’t let you win, you just go as far as you can.
 
 ![kill array](https://github.com/player1xs/Space-Invaders/assets/148089820/66d6cb85-37d4-4b5a-af1f-010265f677ac)
 
-Step 6 - Start/End/Reset
+### Step 6 - Start/End/Reset
 
 Then I went about writing my startGame, endGame and reset functions.
 
@@ -144,37 +144,37 @@ On the gameOver screen is also a button to play again. Once clicked, we initiate
 
 ![startscreen](https://github.com/player1xs/Space-Invaders/assets/148089820/c34d9269-e84d-4144-a1d2-7c3d156b61e9)
 
-Step 7 - time to look good
+### Step 7 - time to look good
 
 Here I played around with the styling, removing the red border from every cell which helped me calculate/visualise the movements. The game has classic pixel font and pixel art throughout; with my favourite black/chartreuse theme that the original space invaders has.
 
 
 ![game screen](https://github.com/player1xs/Space-Invaders/assets/148089820/d943b651-5bb0-4ca7-a54a-491104dd5ae8)
 
-Challenges
+## Challenges
 
 I did face some issues with the Invaders moving at first. Instead of using my add/remove functions I wrote out a classList add remove which created the Invaders, but didn’t make them move. I solved that quickly by adding in my above mentioned function instead.
 
 THEN came the bigger hurt. Once Invaders were shot, they would explode, boom animation, sound, and disappear. But when the array moved to the next cell it iterated a brand new Invader in its place.
 I did originally write a function in my movement pattern for this; but I later found out that I needed to include it in my addInvaders function and filter over the array.
 
-Wins
+## Wins
 
 I had a clear idea in my head on Player creations and movement + shooting; and that all went down without a hitch. I planned Invaders and Player on separate days. But the Player creation was so smooth, and I did all the Invader creation on the same day; and saved myself a fair chunk of planned time.
 
 And I love the styling; finding pixel art within theme; both battle and gameover sound are 8-bit format, and the background is a moving pixel death star gif with sparkly stars; which all made the game feel very cohesive! I love the styling side - so much fun.
 
-Takeaways
+## Takeaways
 
 Got a lot more comfortable using vanilla JS. So far I have only written functions to pass arbitrary challenges. But, seeing them implemented into something grander, rather than logging an answer, was fantastic and solidified the logic in my mind.
 
 Although I planned well and was ahead of my timeline; the deadline did sneak up pretty fast. But, thanks to my planning I was very comfortable and did not have to worry. I spent the extra time refactoring and tidying my code. (and work on some additional functionality). But it's good to remember how quick a week can pass and that timeline and planning is important.
 
-Bugs
+## Bugs
 Sometimes on the GameOver screen, the endgame music will launch infinitely split-seconds after each other, but then the next time it does not and plays clean.
 On other occasions, when the first wave is cleared, the second wave only spawns if the player moves.
 
-Future Improvements
+## Future Improvements
 
 Already started playing around with functionality that the Invaders can shoot back randomly. Left my unfinished code in for the moment, but commented out - will tackle this in future.
 
